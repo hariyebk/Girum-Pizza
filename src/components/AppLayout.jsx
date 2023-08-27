@@ -3,6 +3,7 @@ import CartOverview from "../features/cart/CartOverview"
 import Header from "../components/Header"
 import {useNavigation} from "react-router-dom"
 import Loading from "./Loading"
+import Username from "../features/user/Username"
 
 
 function AppLayout() {
@@ -10,7 +11,7 @@ function AppLayout() {
     return (
         <div className = "grid h-screen grid-rows-[auto_1fr_auto]">
             {loadingState === "loading" && <Loading />}
-            <Header />
+            <Header Username={<Username />} />
             <div className="overflow-scroll">
                 <main className="mx-auto max-w-3xl">
                     <Outlet />
