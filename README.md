@@ -1,3 +1,10 @@
+#Fast-React-Pizza
+
+<h1 align="center">
+    <img src="logo.png"/>
+</h1>
+
+
 ## Tech Stack
 
 <p align="center">
