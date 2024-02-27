@@ -16,7 +16,7 @@ function CartItem({ item }) {
         {quantity}&times; {name}
       </p>
       <div className="flex items-center justify-between lg:gap-6">
-        <p className="text-sm font-bold">{formatCurrency( totalprice)}</p>
+        <p className="text-sm font-bold">{formatCurrency( totalprice * 15)}</p>
         <UpdateItemQuantity pizzaId={pizzaId} currentQuantity={currentQuantity}/>
         <Button type= "small" onClick={() => dispatch(deleteItem(pizzaId))}> Delete </Button>
       </div>

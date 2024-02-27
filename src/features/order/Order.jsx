@@ -61,9 +61,9 @@ function Order() {
       </ul>
 
       <div className="space-y-3 bg-stone-200 px-5 py-5">
-        <p className="text-sm font-medium text-stone-600">Price pizza: {formatCurrency(orderPrice)}</p>
+        <p className="text-sm font-medium text-stone-600">Price pizza: {formatCurrency(orderPrice * 15)}</p>
         {priority && <p>Price priority: {formatCurrency(priorityPrice)}</p>}
-        <p className="font-bold">To pay on delivery: {formatCurrency(orderPrice + priorityPrice)}</p>
+        <p className="font-bold">To pay on delivery: {formatCurrency(orderPrice * 15 + priorityPrice)}</p>
         <div className="flex items-end justify-end">
             { status !== "Order should have arrived" && !priority && <UpdateOrderPriority order = {order}/>}
         </div>

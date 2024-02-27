@@ -8,7 +8,7 @@ function OrderItem({ item, isLoadingIngredients, ingredients }) {
         <p className="font-bold">
           <span>{quantity}&times;</span> {name}
         </p>
-        <p className="font-bold">{formatCurrency(totalPrice)}</p>
+        <p className="font-bold">{formatCurrency(totalPrice * 15)}</p>
       </div>
       <p className="text-sm italic capitalize text-stone-500 py-3">{isLoadingIngredients ? "loading ..." : ingredients.join(", ")}</p>
     </li>

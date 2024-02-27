@@ -36,7 +36,7 @@ function MenuItem({ pizza }) {
         <p className="font-medium">{name}</p>
         <p className="text-stone-500 text-sm italic capitalize">{ingredients.join(', ')}</p>
         <div className="mt-auto flex items-center justify-between">
-          {!soldOut ? <p className="text-sm">{formatCurrency(unitPrice)}</p> : <p className="text-sm uppercase font-medium text-stone-500">Sold out</p>}
+          {!soldOut ? <p className="text-sm">{formatCurrency(unitPrice * 15)}</p> : <p className="text-sm uppercase font-medium text-stone-500">Sold out</p>}
           {soldOut ? null :  pizzaInTheCart?.pizzaId === id ? <div className="flex items-center gap-10">
               <UpdateItemQuantity pizzaId={id} currentQuantity={currentQuantity} />
               <Button type = "small" onClick={handleDelete}> Delete </Button>
